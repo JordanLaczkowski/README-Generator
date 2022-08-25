@@ -1,1 +1,1 @@
-# README-Generator
+{"title":"A really cool README","license":"npm","project":"To gather information to create a professional README","install":"N/A","usage":"JQuery","contributions":"Class","testing":"To use for class","GitHub":"JordanLaczkowski","email":"jordan.laczkowski23@gmail.com"}
