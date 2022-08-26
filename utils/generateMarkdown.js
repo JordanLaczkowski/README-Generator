@@ -1,6 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let licenseType = license.license;
+  let yourLicense = "";
+  if (licenseType === "MIT") {
+    yourLicense = `![License: MIT] (??)`;
+  } else if (licenseType === "??") {
+  }
+  return yourLicense;
+}
 
 //if else statements
 //return will call functions within generateMarkdown
