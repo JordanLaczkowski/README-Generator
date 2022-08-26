@@ -3,8 +3,8 @@
 function renderLicenseBadge(license) {
   let licenseType = license.license;
   let yourLicense = "";
-  if (licenseType === "MIT") {
-    yourLicense = `![License: MIT] (??)`;
+  if (licenseType === "node.js") {
+    yourLicense = `![License: node.js] (![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white))`;
   } else if (licenseType === "??") {
   }
   return yourLicense;
