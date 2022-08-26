@@ -41,9 +41,10 @@ questions = [
     name: "testing",
   },
   {
-    type: "input",
+    type: "list",
     message: "What license is your application using?",
     name: "license",
+    choices: ["GNU", "Apache", "MIT"],
   },
   {
     type: "input",
@@ -68,6 +69,7 @@ inquirer.prompt(questions).then((data) => {
 /* 
 1. How do I link badges? 
 2. License? 
+3. How to link GitHUb
 */
 
 //badge -- return out to pull from shields io -- pulling from url -- find the path to pull beadge from and store like template sring then what user chooses to complete the template string

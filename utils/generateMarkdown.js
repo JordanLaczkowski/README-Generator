@@ -3,12 +3,16 @@
 function renderLicenseBadge(license) {
   let licenseType = license.license;
   let yourLicense = "";
-  if (licenseType === "node.js") {
-    yourLicense = `![License: node.js] (![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white))`;
+  if (licenseType === "GNU") {
+    yourLicense = `![License: GNU] (![GNU](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)`;
   } else if (licenseType === "??") {
   }
   return yourLicense;
 }
+// apache
+// gnu
+// mit
+// isc
 
 //if else statements
 //return will call functions within generateMarkdown
