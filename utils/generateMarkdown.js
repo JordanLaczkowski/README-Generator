@@ -1,35 +1,24 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseType = license.license;
   let yourLicense = "";
-  if (licenseType === "GNU") {
-    yourLicense = `![License: GNU] (![GNU](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)`;
-  } else if (licenseType === "??") {
-  }
+  yourLicense = `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+
   return yourLicense;
 }
-// apache
-// gnu
-// mit
-// isc
 
-//if else statements
-//return will call functions within generateMarkdown
-//${}data.title
+function renderLicenseLink(license) {
+  if (license === "GNU") {
+    return `[GNU](https://choosealicense.com/licenses/agpl-3.0/)`;
+  } else if (license === "MIT") {
+    return `[MIT](https://choosealicense.com/licenses/mit/)`;
+  } else if (license === "Apache") {
+    return `[Apache](https://choosealicense.com/licenses/apache)`;
+  }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `## ${data.title}
   
+  ${renderLicenseBadge(data.license)}
   ## table of contents
   
   1. [description] (#description)
@@ -61,6 +50,8 @@ function generateMarkdown(data) {
   # license
   
   ${data.license}
+
+  ${renderLicenseLink(data.license)}
   
   # contributing
   
@@ -73,7 +64,7 @@ function generateMarkdown(data) {
   # contact
   
   ${data.email}
-  ${data.GitHub})`;
+  [${data.GitHub}](https://github.com/${data.GitHub})`;
 }
 
 module.exports = generateMarkdown;
