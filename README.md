@@ -9,3 +9,5 @@ Simply follow the promts and add the desired input to the questions.
 Once all the questions are answered, you can Preview your README
 
 Check out this video: 
+https://drive.google.com/file/d/1kHrRocmEc32B0VkuqCMiSxkfXqnlOlMm/view
+
