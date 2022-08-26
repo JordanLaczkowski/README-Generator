@@ -11,3 +11,4 @@ Once all the questions are answered, you can Preview your README
 Check out this video: 
 https://drive.google.com/file/d/1kHrRocmEc32B0VkuqCMiSxkfXqnlOlMm/view
 
+<img width="1344" alt="README-Generator" src="https://user-images.githubusercontent.com/109110372/187000011-2ebf08d5-4799-4e7b-b6d8-2117fbc756a2.png">
