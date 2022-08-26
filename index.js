@@ -6,6 +6,7 @@ var questions = [];
 const inquirer = require("inquirer"); //remote module
 const fs = require("fs"); //shipped module
 const generateMarkdown = require("./utils/generateMarkdown");
+const { title } = require("process");
 
 //an array of objects (below in prompt)
 questions = [
@@ -56,32 +57,18 @@ questions = [
   },
 ];
 
-inquirer
-  .prompt(questions)
-  .then((response) => writeToFile("./README.md", response));
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  data = JSON.stringify(data);
-  //data = JSON.parse(data);
-  fs.writeFile(fileName, data, function (err, result) {
-    if (err) {
-      console.log("error", err);
-    }
-  });
+function makeREADME(data) {
+  return;
 }
 
-// TODO: Create a function to initialize app
-function init() {
-  // generateMarkdown.renderLicenseBadge(questions.license);
-}
+inquirer.prompt(questions).then((data) => {
+  fs.writeFileSync("./generatedREADME/README.md", generateMarkdown(data));
+});
 
-// Function call to initialize app
-init();
 /* 
-1. What is the init function suppose to do?
-2. How do I hook up functions from generateMarkdown.js?
-3. How do I format the README.txt file?
-4. How do I link badges? 
-5. How to make the questions then have those certain questions go into table fo contents to be pressed and then function to scroll down to what was pressed? 
+1. How do I link badges? 
+2. License? 
 */
+
+//badge -- return out to pull from shields io -- pulling from url -- find the path to pull beadge from and store like template sring then what user chooses to complete the template string
+//Try to pass a static fucntion ${} and see if the funciton can pull the template with static value
